@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-wzq1 = "Holberton"
-wzq2 = "School"
-wzq1 = wzq1 + " " + wzq2
-print("Welcome to {}!".format(wzq1))
+str1 = "Holberton"
+str2 = "School"
+str1 = str1 + " " + str2
+print("Welcome to {}!".format(str1))
