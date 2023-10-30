@@ -9,28 +9,28 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *p2;
-	listint_t *prev;
+	listint_t *wz;
+	listint_t *wzq;
 
-	p2 = list;
-	prev = list;
-	while (list && p2 && p2->next)
+	wz = list;
+	wzq = list;
+	while (list && wz && wz->next)
 	{
 		list = list->next;
-		p2 = p2->next->next;
+		wz = wz->next->next;
 
-		if (list == p2)
+		if (list == wz)
 		{
-			list = prev;
-			prev =  p2;
+			list = wzq;
+			wzq =  wz;
 			while (1)
 			{
-				p2 = prev;
-				while (p2->next != list && p2->next != prev)
+				wz = wzq;
+				while (wz->next != list && wz->next != wzq)
 				{
-					p2 = p2->next;
+					wz = wz->next;
 				}
-				if (p2->next == list)
+				if (wz->next == list)
 					break;
 
 				list = list->next;
